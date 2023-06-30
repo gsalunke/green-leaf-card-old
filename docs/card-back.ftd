@@ -1,4 +1,4 @@
--- import: <user_name>.github.io/<repo_name>
+-- import: gsalunke.github.io/green-leaf-card
 -- import: fastn-community.github.io/business-card/docs
 
 ;; how-to-use-card-back component arguments (with default values) ------------
@@ -21,8 +21,12 @@
 ;; --------------------------------------------------------------------------
 
 -- docs.how-to-use-card-back:
-package-name: <repo_name>
-package-full-name: <user_name>.github.io/<repo_name>
-license-url: https://github.com/<user_name>/<repo_name>/blob/main/LICENSE
-github: https://github.com/<user_name>/<repo_name>
-sample-code: $<repo_name>.card-back-sample-code
+package-name: green-leaf-card
+package-full-name: gsalunke.github.io/green-leaf-card
+license-url: https://github.com/gsalunke/green-leaf-card/blob/main/LICENSE
+github: https://github.com/gsalunke/green-leaf-card
+sample-code: $green-leaf-card.card-back-sample-code
+c: green-leaf-card
+logo: $assets.files.assets.ipsum-logo.svg
+website: www.johndoe.com
+qr-code: $assets.files.assets.qr-code.png
