@@ -18,15 +18,15 @@
 ;; optional string github:
 ;; --------------------------------------------------------------------------
 
--- docs.home-card: <user_name>
-package-name: <repo_name>
-package-full-name: <user_name>.github.io/<repo_name>
-license-url: https://github.com/<user_name>/<repo_name>/blob/main/LICENSE
+-- docs.home-card: gsalunke
+package-name: green-leaf-card
+package-full-name: gsalunke.github.io/green-leaf-card
+license-url: https://github.com/gsalunke/green-leaf-card/blob/main/LICENSE
 title: Software Developer
 phone-no: +123-4567890
-email: <user_name>@xyz.com
+email: gsalunke@xyz.com
 address: 123 Anywhere, Any City
-github: https://github.com/<user_name>/<repo_name>
+github: https://github.com/gsalunke/green-leaf-card
 
 ;; ---------------- DEFINE YOUR CARD COMPONENTS -----------------------
 ;; Implement your card and card-back components below
@@ -82,19 +82,19 @@ optional ftd.image-src qr-code:
 
 -- string card-sample-code:
 
-\-- import: <user_name>.github.io/<repo_name> as b
+\-- import: gsalunke.github.io/green-leaf-card as b
 
 \-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
 
-\-- b.card: <user_name>
+\-- b.card: gsalunke
 title: Software Developer
-email: <user_name>@xyz.com
+email: gsalunke@xyz.com
 address: 123 Anywhere, Any City
 logo: $default-card-logo
 
 -- string card-back-sample-code:
 
-\-- import: <user_name>.github.io/<repo_name> as b
+\-- import: gsalunke.github.io/green-leaf-card as b
 
 \-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
 
