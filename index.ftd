@@ -1,0 +1,103 @@
+-- import: fastn-community.github.io/business-card/docs
+
+;; home-card component arguments (with default values) ----------------------
+;; caption name:
+;; string package-name: business-card
+;; string package-full-name: fastn-community.github.io/business-card
+;; string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
+;; module c: business-card
+;; optional string company-name:
+;; optional string company-slogan:
+;; optional ftd.image-src qr-code:
+;; optional string title:
+;; optional string phone-no:
+;; optional string email:
+;; optional string address:
+;; optional ftd.image-src logo: $business-card.default-card-logo
+;; optional ftd.image-src avatar:
+;; optional string github:
+;; --------------------------------------------------------------------------
+
+-- docs.home-card: <user_name>
+package-name: <repo_name>
+package-full-name: <user_name>.github.io/<repo_name>
+license-url: https://github.com/<user_name>/<repo_name>/blob/main/LICENSE
+title: Software Developer
+phone-no: +123-4567890
+email: <user_name>@xyz.com
+address: 123 Anywhere, Any City
+github: https://github.com/<user_name>/<repo_name>
+
+;; ---------------- DEFINE YOUR CARD COMPONENTS -----------------------
+;; Implement your card and card-back components below
+
+/-- component card:
+caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
+
+;; <YOUR IMPLEMENTATION HERE>
+
+/-- end: card
+
+
+
+
+
+
+
+
+
+
+/-- component card-back:
+optional caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
+
+;; <YOUR IMPLEMENTATION HERE>
+
+/-- end: card-back
+
+
+
+
+
+
+
+;; ------------------------- VARIABLES --------------------------
+
+-- string card-sample-code:
+
+\-- import: <user_name>.github.io/<repo_name> as b
+
+\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
+
+\-- b.card: <user_name>
+title: Software Developer
+email: <user_name>@xyz.com
+address: 123 Anywhere, Any City
+logo: $default-card-logo
+
+-- string card-back-sample-code:
+
+\-- import: <user_name>.github.io/<repo_name> as b
+
+\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
+
+\-- b.card-back:
+logo: $default-card-logo
+company-slogan: If you can type you can code
