@@ -15,7 +15,7 @@ business card of your choice.
 
 # [Dive into the Docs](https://gsalunke.github.io/green-leaf-card/)
 
-## fastn - [Business Card Template](https://github.com/fastn-community/business-card-template)
+## Created using [fastn](https://fastn.com/) - [Business Card Template](https://github.com/fastn-community/business-card-template)
 
 ## fastn and Curious?
 
