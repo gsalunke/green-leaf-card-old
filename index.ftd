@@ -225,9 +225,9 @@ color: #0F3825
 
 \-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
 
-\-- b.card: gsalunke
+\-- b.card: John Doe
 title: Software Developer
-email: gsalunke@xyz.com
+email: johndoe@xyz.com
 address: 123 Anywhere, Any City
 logo: $default-card-logo
 

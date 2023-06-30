@@ -26,7 +26,7 @@ package-full-name: gsalunke.github.io/green-leaf-card
 license-url: https://github.com/gsalunke/green-leaf-card/blob/main/LICENSE
 title: Software Developer
 phone-no: +123-4567890
-email: gsalunke@xyz.com
+email: johndoe@xyz.com
 address: 123 Anywhere, Any City
 github: https://github.com/gsalunke/green-leaf-card
 sample-code: $green-leaf-card.card-sample-code

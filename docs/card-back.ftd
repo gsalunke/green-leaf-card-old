@@ -20,7 +20,7 @@
 ;; string sample-code:
 ;; --------------------------------------------------------------------------
 
--- docs.how-to-use-card-back:
+-- docs.how-to-use-card-back: John Doe
 package-name: green-leaf-card
 package-full-name: gsalunke.github.io/green-leaf-card
 license-url: https://github.com/gsalunke/green-leaf-card/blob/main/LICENSE
