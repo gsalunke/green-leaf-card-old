@@ -20,7 +20,7 @@
 ;; string sample-code:
 ;; --------------------------------------------------------------------------
 
--- docs.how-to-use-card: gsalunke
+-- docs.how-to-use-card: John Doe
 package-name: green-leaf-card
 package-full-name: gsalunke.github.io/green-leaf-card
 license-url: https://github.com/gsalunke/green-leaf-card/blob/main/LICENSE
@@ -30,3 +30,7 @@ email: gsalunke@xyz.com
 address: 123 Anywhere, Any City
 github: https://github.com/gsalunke/green-leaf-card
 sample-code: $green-leaf-card.card-sample-code
+c: green-leaf-card
+logo: $assets.files.assets.ipsum-logo.svg
+website: www.johndoe.com
+qr-code: $assets.files.assets.qr-code.png

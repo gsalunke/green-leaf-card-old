@@ -1,4 +1,5 @@
 -- import: fastn-community.github.io/business-card/docs
+-- import: gsalunke.github.io/green-leaf-card
 
 ;; home-card component arguments (with default values) ----------------------
 ;; caption name:
@@ -18,20 +19,29 @@
 ;; optional string github:
 ;; --------------------------------------------------------------------------
 
--- docs.home-card: gsalunke
+-- docs.home-card: John Doe
 package-name: green-leaf-card
 package-full-name: gsalunke.github.io/green-leaf-card
 license-url: https://github.com/gsalunke/green-leaf-card/blob/main/LICENSE
 title: Software Developer
 phone-no: +123-4567890
-email: gsalunke@xyz.com
+email: johndoe@xyz.com
 address: 123 Anywhere, Any City
 github: https://github.com/gsalunke/green-leaf-card
+c: green-leaf-card
+logo: $assets.files.assets.ipsum-logo.svg
+website: www.johndoe.com
+qr-code: $assets.files.assets.qr-code.png
 
-;; ---------------- DEFINE YOUR CARD COMPONENTS -----------------------
-;; Implement your card and card-back components below
 
-/-- component card:
+
+
+
+
+
+
+
+-- component card:
 caption name:
 optional string company-name:
 optional string title:
@@ -42,10 +52,112 @@ optional ftd.image-src logo:
 optional ftd.image-src avatar:
 optional string company-slogan:
 optional ftd.image-src qr-code:
+optional string website:
 
-;; <YOUR IMPLEMENTATION HERE>
+-- ftd.column:
+width.fixed.px: 600
+height.fixed.px: 297
+spacing.fixed.px: 10
+background.image: $bg-image
+padding-vertical.px: 34
+border-width.px: 1
+border-color: $inherited.colors.border-strong
 
-/-- end: card
+-- ftd.image:
+if: { card.qr-code != NULL }
+src: $card.qr-code
+width.fixed.px: 64
+height.fixed.px: 64
+anchor: parent
+right.px: 12
+top.px: 12
+
+-- ftd.column:
+padding-left.px: 94
+align-content: left
+width: fill-container
+
+-- ftd.text: $card.name
+role: $inherited.types.heading-medium
+color: #000
+
+-- ftd.text: $card.title
+role: $inherited.types.fine-print
+color: #0F3825
+padding-left.px: 2
+
+-- ftd.column:
+width.fixed.percent: 70
+spacing.fixed.px: 8
+margin-top.px: 34
+
+-- ftd.row:
+if: { card.phone-no != NULL }
+spacing.fixed.px: 16
+
+-- ftd.image:
+src: $assets.files.assets.phone-icon.svg
+width.fixed.px: 24
+height.fixed.px: 24
+
+-- ftd.text: $card.phone-no
+role: $inherited.types.fine-print
+color: #0F3825
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { card.email != NULL }
+spacing.fixed.px: 16
+
+-- ftd.image:
+src: $assets.files.assets.email-icon.svg
+width.fixed.px: 24
+height.fixed.px: 24
+
+-- ftd.text: $card.email
+role: $inherited.types.fine-print
+color: #0F3825
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { card.website != NULL }
+spacing.fixed.px: 16
+
+-- ftd.image:
+src: $assets.files.assets.web-icon.svg
+width.fixed.px: 24
+height.fixed.px: 24
+
+-- ftd.text: $card.website
+role: $inherited.types.fine-print
+color: #0F3825
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { card.address != NULL }
+spacing.fixed.px: 16
+
+-- ftd.image:
+src: $assets.files.assets.map-icon.svg
+width.fixed.px: 24
+height.fixed.px: 24
+
+-- ftd.text: $card.address
+role: $inherited.types.fine-print
+color: #0F3825
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: card
 
 
 
@@ -56,21 +168,48 @@ optional ftd.image-src qr-code:
 
 
 
-/-- component card-back:
+-- component card-back:
 optional caption name:
 optional string company-name:
 optional string title:
 optional string phone-no:
 optional string email:
 optional string address:
-optional ftd.image-src logo:
+optional ftd.image-src logo: 
 optional ftd.image-src avatar:
 optional string company-slogan:
 optional ftd.image-src qr-code:
+optional string website:
 
-;; <YOUR IMPLEMENTATION HERE>
+-- ftd.column:
+width.fixed.px: 600
+height.fixed.px: 297
+spacing.fixed.px: 10
+background.image: $bg-image
+padding-vertical.px: 34
+border-width.px: 1
+border-color: $inherited.colors.border-strong
 
-/-- end: card-back
+-- ftd.column:
+width: fill-container
+height: fill-container
+align-content: center
+spacing.fixed.px: 8
+
+-- ftd.image: $card-back.logo
+if: { card-back.logo != NULL }
+width.fixed.px: 250
+
+-- ftd.text: $card-back.company-slogan
+if: { card-back.company-slogan != NULL }
+role: $inherited.types.copy-regular
+color: #0F3825
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: card-back
 
 
 
@@ -101,3 +240,8 @@ logo: $default-card-logo
 \-- b.card-back:
 logo: $default-card-logo
 company-slogan: If you can type you can code
+
+-- ftd.background-image bg-image:
+src: $assets.files.assets.background-image.jpg
+repeat: no-repeat
+background-size: cover
